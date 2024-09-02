@@ -36,9 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const header = document.querySelector('header');
 
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
+    if (hamburger && header) {
+        hamburger.addEventListener('click', function() {
             header.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!header.contains(event.target) && !hamburger.contains(event.target)) {
+                header.classList.remove('active');
+            }
         });
     }
 
