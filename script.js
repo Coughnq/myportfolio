@@ -32,57 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Hamburger menu functionality
-    const hamburger = document.querySelector('.hamburger');
-    const header = document.querySelector('header');
-
-    if (hamburger && header) {
-        hamburger.addEventListener('click', function() {
-            header.classList.toggle('active');
-        });
-
-        document.addEventListener('click', function(event) {
-            if (!header.contains(event.target) && !hamburger.contains(event.target)) {
-                header.classList.remove('active');
-            }
-        });
-    }
-
-    // Close menu when a link is clicked
-    document.querySelectorAll('header a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 767) {
-                header.classList.remove('active');
-            }
-        });
+    // Add active class to current page in navigation
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
     });
-
-    // Add any other animations or functionality here
 });
-
-// Add this new function at the end of your file, outside of any existing event listeners
-function initHamburgerMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const header = document.querySelector('header');
-
-    if (hamburger && header) {
-        hamburger.addEventListener('click', () => {
-            header.classList.toggle('active');
-        });
-
-        document.querySelectorAll('header a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 767) {
-                    header.classList.remove('active');
-                }
-            });
-        });
-    }
-}
-
-// Call the function after the DOM is fully loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHamburgerMenu);
-} else {
-    initHamburgerMenu();
-}
