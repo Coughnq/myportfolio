@@ -612,3 +612,17 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        padding-top: 150px; /* Adjust based on your header height */
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
