@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" type="image/svg+xml" href="/image/image1.svg">
+    <title>Info</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="/image/image1.svg">
 </head>
 <body>
+    <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <header>
         <div class="logo">
             <img src="image/image1.svg" alt="Logo">
@@ -36,76 +41,73 @@
     </header>
 
     <main>
-        <section id="hero">
+        <section id="about-me">
             <div class="container">
-                <h2 class="animate-text">Shapings visions into<br>memorable <span class="italic">interactions</span>.</h2>
-                <p class="animate-text">Creative Technologist at <span class="italic">Intelliquinte.</span> <br> Based in North Carolina.</p>
-            </div>
-        </section>
-
-        <section id="featured-projects">
-            <div class="container">
-                <h2 class="animate-text">Featured Work</h2>
-                <div class="featured-project animate-card">
-                    <div class="project-image">
-                        <img src="/image/btp.jpg" alt="Beyond The Page Newsletter">
-                    </div>
-                    <div class="project-info">
-                        <h3>Beyond The Page Newsletter</h3>
-                        <p>
-                            Discover ideas that transcend traditional writing with <i>Beyond The Page</i>.
-                            Our newsletter explores themes and narratives that go beyond mere text,
-                            crafting experiences that resonate deeply in both thought and emotion.
-                            Each edition features reflections, essays, and musings designed to spark meaningful connections
-                            and inspire introspection. Join us on a journey where stories linger and ideas come alive.
-                        </p>
-                        <a href="https://isitab.substack.com/" class="btn" target="_blank">View Project</a>
+                <h2 class="animate-text">About Me</h2>
+                <div class="about-content">
+                    <img src="image/profile.jpg" alt="Abner" class="profile-img animate-card">
+                    <div class="bio animate-text">
+                        <p>Hi, I'm Abner—a 16-year-old from North Carolina with a passion for creating and refining digital experiences. I manage a personal website, Intelliquinte, where I share my projects, writings, and reflections.</p>
+                        
+                        <p>My interests span from exploring the nuances of web design and development to crafting emotionally resonant content. I enjoy working with HTML, CSS, and JavaScript to build and maintain my site, and I'm currently delving into frameworks and tools like GitHub Pages and Supabase.</p>
+                        
+                        <p>When I'm not working on my website or writing, you might find me engaged in various retail tasks or reflecting on personal growth. I strive to balance technical challenges with creative pursuits, aiming to develop a compelling online presence while enhancing my skills.</p>
+                        
+                        <p>My goal is to create meaningful content and experiences that resonate with others, all while navigating the exciting journey of self-improvement and discovery.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="recent-projects">
+        <section id="experience">
             <div class="container">
-                <h2 class="animate-text">Recent Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card animate-card">
-                        <img src="image/wni.png" alt="Project 1">
-                        <h3>Project: "We're Not Interested!"</h3>
-                        <p> A playful and firm notice for door-to-door salespeople, clearly stating our contentment with current services and our preference to avoid unsolicited pitches.</p>
-                        <a href="https://intelliquinte.com/we-are-not-interested/" class="btn" target="_blank">View Project</a>
+                <h2 class="animate-text">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-card">
+                        <div class="timeline-item-content">
+                            <h3>Structural Surface Painter</h3>
+                            <p class="company">E. Caligari & Sons.</p>
+                            <p class="date">2020 - 2021</p>
+                            <p> Expertly painted a high school, transforming architectural surfaces with precision and artistic flair.</p>
+                        </div>
                     </div>
-                    <div class="project-card animate-card">
-                        <img src="/image/imagescatter.png" alt="Project 2">
-                        <h3>Project: Image Scatter Tool</h3>
-                        <p>An interactive tool that allows users to effortlessly arrange and distribute images across a canvas, offering customizable options for spacing, alignment, and layout to enhance visual presentations.</p>
-                        <a href="/image-scatter-app.zip" class="btn" target="_blank">Download Project</a>
+                    <div class="timeline-item animate-card">
+                        <div class="timeline-item-content">
+                            <h3>Domino's Pizza Specialist</h3>
+                            <p class="company">Domino's Pizza</p>
+                            <p class="date">2023 - 2024</p>
+                            <p>Efficiently managed orders, crafted delicious pizzas, and delivered exceptional customer service in a fast-paced environment.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-card">
+                        <div class="timeline-item-content">
+                            <h3>Guest Experience Coordinator</h3>
+                            <p class="company">Target</p>
+                            <p class="date">2024 - Current</p>
+                            <p>Dedicated to providing outstanding customer service, assisting guests with their needs, and ensuring a positive shopping experience.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="education">
             <div class="container">
-                <h2 class="animate-text">Skills & Expertise</h2>
-                <ul class="skill-list">
-                    <li class="animate-card">Cinematography</li>
-                    <li class="animate-card">Digital Illustration</li>
-                    <li class="animate-card">Photographic Arts</li>
-                    <li class="animate-card">Visual Media Editingg</li>
-                    <li class="animate-card">Web Development</li>
-                    <li class="animate-card">Creative Writing</li>
-                </ul>
+                <h2 class="animate-text">Education</h2>
+                <div class="education-item animate-card">
+                    <h3>High School Student</h3>
+                    <p class="school">Leesville Road High School</p>
+                    <p class="date">2023 - Current</p>
+                    <p>Currently a student at Leesville Road High School, enrolled since 2023.</p>
+                </div>
             </div>
         </section>
 
-        <section id="testimonials">
+        <section id="contact">
             <div class="container">
-                <h2 class="animate-text">What People Say</h2>
-                <div class="testimonial animate-card">
-                    <blockquote>"Abner looked like a leader in the midst of his prime. He handled the whole situation like a pro. Abner when you are ready, I'll take you on my team any day."</blockquote>
-                    <cite>- Victoria Redding, AP Business Partner at Target</cite>
-                </div>
+                <h2 class="animate-text">Get in Touch</h2>
+                <p class="animate-text">Interested in working together? Feel free to reach out!</p>
+                <a href="mailto:abner@intelliquinte.com" class="btn animate-card">Contact Me</a>
             </div>
         </section>
     </main>
